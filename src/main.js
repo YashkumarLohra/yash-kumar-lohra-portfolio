@@ -11,6 +11,7 @@ import { renderProjects } from './sections/Projects/Projects.js';
 import { renderExperience } from './sections/Experience/Experience.js';
 import { renderEducation } from './sections/Education/Education.js';
 import { renderClientValue } from './sections/ClientValue/ClientValue.js';
+import { renderJourney } from './sections/Journey/Journey.js';
 import { initScrollReveal } from './utils/scrollReveal.js';
 
 // Development Day 2 Setup
@@ -30,6 +31,7 @@ app.innerHTML = `
     ${renderExperience()}
     ${renderEducation()}
     ${renderClientValue()}
+    ${renderJourney()}
   </main>
 `;
 

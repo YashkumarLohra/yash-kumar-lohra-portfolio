@@ -1,0 +1,94 @@
+/* src/components/JourneyStep/JourneyStep.css */
+.journey-step {
+  position: relative;
+  padding-left: var(--space-2xl);
+  padding-bottom: var(--space-xl);
+}
+
+/* The vertical line */
+.journey-step::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 5px;
+  width: 1px;
+  height: 100%;
+  background-color: var(--color-border);
+  z-index: 1;
+}
+
+/* Hide the line on the last element so it doesn't extend unnecessarily */
+.journey-step:last-child::before {
+  display: none;
+}
+
+/* The circular node */
+.journey-step::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 0;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background-color: var(--color-bg-base);
+  border: 2px solid var(--color-border);
+  z-index: 2;
+  transition: border-color var(--transition-normal), transform var(--transition-normal);
+}
+
+.journey-step:hover::after {
+  border-color: var(--color-text-secondary);
+  transform: scale(1.2);
+}
+
+.journey-step-content {
+  position: relative;
+  top: -4px;
+  transition: transform var(--transition-normal);
+}
+
+.journey-step:hover .journey-step-content {
+  transform: translateX(4px);
+}
+
+.journey-step-header {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xs);
+}
+
+.journey-step-number {
+  font-family: monospace;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.journey-step-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  letter-spacing: 0.05em;
+}
+
+.journey-step-desc {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .journey-step::after,
+  .journey-step-content {
+    transition: none;
+  }
+  .journey-step:hover::after {
+    transform: none;
+  }
+  .journey-step:hover .journey-step-content {
+    transform: none;
+  }
+}
