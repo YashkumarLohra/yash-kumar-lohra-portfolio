@@ -15,6 +15,19 @@ body {
   flex-direction: column;
 }
 
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 var(--space-xl);
+  }
+}
+
 ::selection {
   background-color: var(--color-text-primary);
   color: var(--color-bg-base);
