@@ -6,6 +6,7 @@ import { renderValueProposition } from './sections/ValueProposition/ValueProposi
 import { renderFeaturedWork } from './sections/FeaturedWork/FeaturedWork.js';
 import { renderAbout } from './sections/About/About.js';
 import { renderSkills } from './sections/Skills/Skills.js';
+import { renderProcess } from './sections/Process/Process.js';
 import { initScrollReveal } from './utils/scrollReveal.js';
 
 // Development Day 2 Setup
@@ -20,6 +21,7 @@ app.innerHTML = `
     ${renderFeaturedWork()}
     ${renderAbout()}
     ${renderSkills()}
+    ${renderProcess()}
   </main>
 `;
 
