@@ -4,6 +4,7 @@ import { renderHero } from './sections/Hero/Hero.js';
 import { renderServices } from './sections/Services/Services.js';
 import { renderValueProposition } from './sections/ValueProposition/ValueProposition.js';
 import { renderFeaturedWork } from './sections/FeaturedWork/FeaturedWork.js';
+import { renderAbout } from './sections/About/About.js';
 import { initScrollReveal } from './utils/scrollReveal.js';
 
 // Development Day 2 Setup
@@ -16,6 +17,7 @@ app.innerHTML = `
     ${renderServices()}
     ${renderValueProposition()}
     ${renderFeaturedWork()}
+    ${renderAbout()}
   </main>
 `;
 
