@@ -1,0 +1,63 @@
+/* src/sections/Projects/Projects.css */
+.projects-section {
+  padding-top: var(--space-2xl);
+  padding-bottom: var(--space-2xl);
+  background-color: var(--color-bg-base);
+  border-top: 1px solid var(--color-border);
+}
+
+.projects-header {
+  margin-bottom: var(--space-2xl);
+}
+
+.projects-eyebrow {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-md);
+  text-transform: uppercase;
+}
+
+.projects-headline {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-md);
+}
+
+.projects-subhead {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  max-width: 600px;
+}
+
+/* Grid Layout */
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+}
+
+/* Gracefully handle multiple projects on desktop */
+@media (min-width: 992px) {
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: var(--space-2xl);
+  }
+}
+
+/* Safe empty state */
+.projects-empty {
+  padding: var(--space-2xl);
+  text-align: center;
+  background-color: var(--color-bg-surface);
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-lg);
+  color: var(--color-text-secondary);
+  font-size: 1.125rem;
+}
