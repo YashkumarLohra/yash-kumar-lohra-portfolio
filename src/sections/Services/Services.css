@@ -1,0 +1,56 @@
+/* src/sections/Services/Services.css */
+.services-section {
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-2xl);
+  background-color: var(--color-bg-base);
+}
+
+@media (min-width: 768px) {
+  .services-section {
+    padding-top: var(--space-2xl);
+    padding-bottom: 120px;
+  }
+}
+
+.services-header {
+  margin-bottom: var(--space-2xl);
+  max-width: 800px;
+}
+
+.services-eyebrow {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-md);
+  text-transform: uppercase;
+}
+
+.services-headline {
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-md);
+}
+
+.services-subhead {
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+@media (min-width: 992px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+  }
+}

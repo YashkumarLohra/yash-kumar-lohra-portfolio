@@ -1,0 +1,102 @@
+/* src/components/ServiceCard/ServiceCard.css */
+.service-card {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-lg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background-color: transparent;
+  transition: transform var(--transition-normal), border-color var(--transition-normal), background-color var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .service-card {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: var(--space-xl);
+    gap: var(--space-xl);
+  }
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.15);
+  background-color: var(--color-bg-elevated);
+}
+
+.service-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-md);
+  flex-shrink: 0;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+@media (min-width: 768px) {
+  .service-card-icon {
+    margin-bottom: 0;
+    width: 64px;
+    height: 64px;
+  }
+}
+
+.service-card:hover .service-card-icon {
+  background-color: var(--color-text-primary);
+  color: var(--color-bg-base);
+}
+
+.service-card-content {
+  flex-grow: 1;
+}
+
+.service-card-header {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
+}
+
+.service-card-number {
+  font-family: monospace;
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  opacity: 0.5;
+}
+
+.service-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .service-card-title {
+    font-size: 1.5rem;
+  }
+}
+
+.service-card-desc {
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .service-card {
+    transition: none;
+  }
+  .service-card:hover {
+    transform: none;
+  }
+}
