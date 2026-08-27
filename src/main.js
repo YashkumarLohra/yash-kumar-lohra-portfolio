@@ -9,6 +9,7 @@ import { renderSkills } from './sections/Skills/Skills.js';
 import { renderProcess } from './sections/Process/Process.js';
 import { renderProjects } from './sections/Projects/Projects.js';
 import { renderExperience } from './sections/Experience/Experience.js';
+import { renderEducation } from './sections/Education/Education.js';
 import { initScrollReveal } from './utils/scrollReveal.js';
 
 // Development Day 2 Setup
@@ -26,6 +27,7 @@ app.innerHTML = `
     ${renderProcess()}
     ${renderProjects()}
     ${renderExperience()}
+    ${renderEducation()}
   </main>
 `;
 
