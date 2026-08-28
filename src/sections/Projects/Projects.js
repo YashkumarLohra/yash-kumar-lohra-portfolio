@@ -11,7 +11,7 @@ export function renderProjects() {
       <div class="container">
         
         <header class="projects-header reveal">
-          <span class="projects-eyebrow">Work Showcase</span>
+          <span class="projects-eyebrow">Work Showcase &bull; ${projects.length < 10 ? '0' + projects.length : projects.length} PROJECTS</span>
           <h2 id="projects-title" class="projects-headline">SELECTED PROJECTS.</h2>
           <p class="projects-subhead">
             A selection of websites and digital experiences I've built while developing my craft across frontend development and design.

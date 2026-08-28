@@ -46,7 +46,7 @@
 /* Gracefully handle multiple projects on desktop */
 @media (min-width: 992px) {
   .projects-grid {
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--space-2xl);
   }
 }
