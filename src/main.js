@@ -13,6 +13,7 @@ import { renderEducation } from './sections/Education/Education.js';
 import { renderClientValue } from './sections/ClientValue/ClientValue.js';
 import { renderJourney } from './sections/Journey/Journey.js';
 import { renderContact } from './sections/Contact/Contact.js';
+import { renderFooter } from './components/Footer/Footer.js';
 import { initScrollReveal } from './utils/scrollReveal.js';
 
 // Development Day 2 Setup
@@ -35,6 +36,7 @@ app.innerHTML = `
     ${renderJourney()}
     ${renderContact()}
   </main>
+  ${renderFooter()}
 `;
 
 // Initialize component logic
