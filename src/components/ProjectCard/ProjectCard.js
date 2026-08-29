@@ -9,7 +9,7 @@ export function renderProjectCard(project, index) {
   const imageSrc = project.image || (project.screenshots ? project.screenshots[0] : null);
 
   const visualContent = hasImage 
-    ? `<img src="${imageSrc}" alt="Screenshot of ${project.name}" loading="lazy" />`
+    ? `<img src="${imageSrc}" alt="${project.name} homepage" loading="lazy" decoding="async" />`
     : `
       <div class="project-card-fallback" aria-hidden="true">
         <div class="fallback-browser-bar">

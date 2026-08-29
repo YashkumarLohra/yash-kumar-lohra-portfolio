@@ -21,21 +21,25 @@ export function renderFeaturedWork() {
 
         <article class="featured-project">
           
-          <!-- Abstract Project Visual Placeholder -->
-          <div class="project-visual-wrapper reveal" aria-hidden="true">
-            <div class="project-visual-browser">
-              <div class="browser-dot"></div>
-              <div class="browser-dot"></div>
-              <div class="browser-dot"></div>
-            </div>
-            <div class="project-visual-content">
-              <div class="visual-skeleton-hero"></div>
-              <div class="visual-skeleton-grid">
-                <div class="visual-skeleton-box"></div>
-                <div class="visual-skeleton-box"></div>
+          <figure class="project-visual-wrapper reveal">
+            ${lumiere.image 
+              ? `<img src="${lumiere.image}" alt="${lumiere.name} homepage" class="project-visual-img" />`
+              : `
+              <div class="project-visual-browser" aria-hidden="true">
+                <div class="browser-dot"></div>
+                <div class="browser-dot"></div>
+                <div class="browser-dot"></div>
               </div>
-            </div>
-          </div>
+              <div class="project-visual-content" aria-hidden="true">
+                <div class="visual-skeleton-hero"></div>
+                <div class="visual-skeleton-grid">
+                  <div class="visual-skeleton-box"></div>
+                  <div class="visual-skeleton-box"></div>
+                </div>
+              </div>
+              `
+            }
+          </figure>
 
           <!-- Project Information -->
           <div class="project-info reveal" style="transition-delay: 200ms;">
