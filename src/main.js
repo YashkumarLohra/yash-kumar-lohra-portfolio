@@ -13,6 +13,7 @@ import { renderEducation } from './sections/Education/Education.js';
 import { renderClientValue } from './sections/ClientValue/ClientValue.js';
 import { renderJourney } from './sections/Journey/Journey.js';
 import { renderContact } from './sections/Contact/Contact.js';
+import { renderGitHub } from './sections/GitHub/GitHub.js';
 import { renderFooter } from './components/Footer/Footer.js';
 import { initScrollReveal } from './utils/scrollReveal.js';
 
@@ -34,6 +35,7 @@ app.innerHTML = `
     ${renderEducation()}
     ${renderClientValue()}
     ${renderJourney()}
+    ${renderGitHub()}
     ${renderContact()}
   </main>
   ${renderFooter()}

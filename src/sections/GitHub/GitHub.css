@@ -1,0 +1,136 @@
+/* src/sections/GitHub/GitHub.css */
+
+.github-section {
+  padding-top: var(--space-2xl);
+  padding-bottom: var(--space-2xl);
+  background-color: var(--color-bg-base);
+  border-top: 1px solid var(--color-border);
+}
+
+.github-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2xl);
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .github-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.github-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.github-eyebrow {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-md);
+  text-transform: uppercase;
+}
+
+.github-headline {
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-md);
+}
+
+.github-description {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-xl);
+  max-width: 480px;
+}
+
+.github-cta {
+  align-self: flex-start;
+}
+
+/* Disabled CTA styling */
+.github-cta[disabled],
+.github-cta.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: not-allowed;
+  background-color: var(--color-bg-elevated);
+  color: var(--color-text-secondary);
+}
+
+/* Abstract Code Panel */
+.github-visual {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-slow);
+}
+
+.github-visual:hover {
+  transform: scale(1.02);
+}
+
+.code-panel-header {
+  height: 32px;
+  background-color: var(--color-bg-elevated);
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  padding: 0 var(--space-md);
+  gap: 8px;
+}
+
+.code-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--color-border);
+}
+
+.code-dot:nth-child(1) { background-color: #ff5f56; }
+.code-dot:nth-child(2) { background-color: #ffbd2e; }
+.code-dot:nth-child(3) { background-color: #27c93f; }
+
+.code-panel-body {
+  flex: 1;
+  padding: var(--space-xl);
+  background: linear-gradient(135deg, rgba(30, 30, 30, 0.4), transparent);
+  font-family: monospace;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+  overflow: hidden;
+}
+
+.code-line {
+  display: block;
+  white-space: pre;
+}
+
+.code-keyword { color: #c678dd; }
+.code-variable { color: #e5c07b; }
+.code-punctuation { color: #abb2bf; }
+.code-property { color: #e06c75; }
+.code-boolean { color: #d19a66; }
+
+@media (prefers-reduced-motion: reduce) {
+  .github-visual {
+    transition: none;
+  }
+  .github-visual:hover {
+    transform: none;
+  }
+}
