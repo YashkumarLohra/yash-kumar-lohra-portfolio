@@ -1,13 +1,5 @@
 /* src/sections/Services/Services.css */
-.services-section {
-  padding-top: var(--space-xl);
-}
 
-@media (min-width: 768px) {
-  .services-section {
-    padding-bottom: 120px;
-  }
-}
 
 .services-header {
   margin-bottom: var(--space-2xl);

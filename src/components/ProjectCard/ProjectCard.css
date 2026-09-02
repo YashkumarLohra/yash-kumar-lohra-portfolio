@@ -96,6 +96,12 @@
   flex: 1;
 }
 
+@media (min-width: 768px) {
+  .project-card-content {
+    padding: var(--space-xl);
+  }
+}
+
 .project-card-header {
   margin-bottom: var(--space-md);
 }

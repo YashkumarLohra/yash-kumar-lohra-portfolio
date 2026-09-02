@@ -45,7 +45,7 @@ export function renderContact() {
             <article class="contact-email-card reveal" style="transition-delay: 200ms;">
               <span class="contact-email-label">Direct Contact</span>
               <a href="mailto:${siteConfig.email}" class="contact-email-link" aria-label="Email Yash">${siteConfig.email}</a>
-              <a href="mailto:${siteConfig.email}" class="contact-email-button">Email Me</a>
+              <a href="mailto:${siteConfig.email}" class="btn btn--primary">Email Me</a>
             </article>
 
             <article class="contact-social-card reveal" style="transition-delay: 300ms;">

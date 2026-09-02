@@ -20,8 +20,8 @@ section[id] {
 }
 
 .section {
-  padding-top: var(--space-2xl);
-  padding-bottom: var(--space-2xl);
+  padding-top: clamp(4rem, 10vw, var(--space-2xl));
+  padding-bottom: clamp(4rem, 10vw, var(--space-2xl));
   background-color: var(--color-bg-base);
 }
 
@@ -64,7 +64,10 @@ a:hover, a:focus-visible {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: var(--space-sm) var(--space-lg);
+  height: 48px;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
   border-radius: var(--radius-md);
   border: 1px solid var(--color-border);
   background: transparent;
