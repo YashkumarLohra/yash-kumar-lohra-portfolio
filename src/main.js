@@ -1,6 +1,6 @@
 import './styles/base.css';
 import { renderNavbar, initNavbar } from './components/Navbar/Navbar.js';
-import { renderHero } from './sections/Hero/Hero.js';
+import { renderHero, initHero } from './sections/Hero/Hero.js';
 import { renderServices } from './sections/Services/Services.js';
 import { renderValueProposition } from './sections/ValueProposition/ValueProposition.js';
 import { renderFeaturedWork } from './sections/FeaturedWork/FeaturedWork.js';
@@ -43,4 +43,5 @@ app.innerHTML = `
 
 // Initialize component logic
 initNavbar();
+initHero();
 initScrollReveal();
