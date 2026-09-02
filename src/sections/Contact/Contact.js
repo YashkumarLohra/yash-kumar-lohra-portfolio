@@ -27,9 +27,9 @@ export function renderContact() {
           
           <div class="contact-left">
             <header class="contact-header reveal">
-              <span class="contact-eyebrow">Start a Project</span>
-              <h2 id="contact-title" class="contact-headline">HAVE A PROJECT IN MIND?</h2>
-              <p class="contact-lead">Tell me what you're building, and let's talk about how I can turn the idea into a modern web experience.</p>
+              <span class="contact-eyebrow">Get In Touch</span>
+              <h2 id="contact-title" class="contact-headline">LET'S WORK TOGETHER.</h2>
+              <p class="contact-lead">If you need a business website, landing page, UI/UX design, or responsive frontend development, feel free to reach out. Tell me about your project and we can discuss how to bring it to life.</p>
             </header>
 
             <div class="reveal" style="transition-delay: 150ms;">
@@ -45,11 +45,11 @@ export function renderContact() {
             <article class="contact-email-card reveal" style="transition-delay: 200ms;">
               <span class="contact-email-label">Direct Contact</span>
               <a href="mailto:${siteConfig.email}" class="contact-email-link" aria-label="Email Yash">${siteConfig.email}</a>
-              <a href="mailto:${siteConfig.email}" class="btn btn--primary">Email Me</a>
+              <a href="mailto:${siteConfig.email}" class="btn btn--primary">Let's Work Together</a>
             </article>
 
             <article class="contact-social-card reveal" style="transition-delay: 300ms;">
-              <h3 class="contact-social-title">Professional Networks</h3>
+              <h3 class="contact-social-title">Freelance Platforms & Networks</h3>
               <nav aria-label="Social and freelance profiles">
                 <div class="contact-social-list">
                   ${socialLinks.map(link => `

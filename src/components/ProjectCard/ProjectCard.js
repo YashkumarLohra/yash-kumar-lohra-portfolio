@@ -98,7 +98,7 @@ export function renderProjectCard(project, index) {
           <footer class="project-card-actions layer-front">
             ${project.liveUrl ? `
               <a href="${project.liveUrl}" target="_blank" rel="noopener noreferrer" class="project-action-link project-action-live">
-                <span>View Live</span>
+                <span>Live Demo</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <line x1="7" y1="17" x2="17" y2="7"></line>
                   <polyline points="7 7 17 7 17 17"></polyline>

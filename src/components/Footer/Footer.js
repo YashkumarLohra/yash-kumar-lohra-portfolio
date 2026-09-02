@@ -21,7 +21,7 @@ export function renderFooter() {
           <div class="footer-brand">
             <a href="#top" class="footer-logo">${siteConfig.name.split(' ')[0].toUpperCase()}.</a>
             <p class="footer-role">${siteConfig.role}</p>
-            <a href="#contact" class="footer-cta">Let's build something meaningful &rarr;</a>
+            <a href="#contact" class="footer-cta">Let's Work Together &rarr;</a>
           </div>
 
           <!-- Quick Navigation -->

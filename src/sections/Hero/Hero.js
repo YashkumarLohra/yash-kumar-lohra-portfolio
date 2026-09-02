@@ -21,8 +21,8 @@ export function renderHero() {
           </p>
           
           <div class="hero-ctas">
-            <a href="#work" class="btn btn--primary">View My Work</a>
-            <a href="#contact" class="btn">Let's Work Together</a>
+            <a href="#contact" class="btn btn--primary">Let's Work Together</a>
+            <a href="#projects" class="btn">View My Work</a>
           </div>
 
           <div class="hero-social">

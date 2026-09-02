@@ -61,7 +61,7 @@ export function renderFeaturedWork() {
 
             <div class="project-ctas">
               <a href="${lumiere.liveUrl}" target="_blank" rel="noopener noreferrer" class="btn btn--primary">
-                View Live Website
+                Live Demo
               </a>
               <a href="${lumiere.githubUrl}" target="_blank" rel="noopener noreferrer" class="btn">
                 View Source

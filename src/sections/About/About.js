@@ -60,7 +60,7 @@ export function renderAbout() {
 
             <div class="about-cta reveal" style="transition-delay: 500ms;">
               <span class="about-cta-text">Have a project in mind?</span>
-              <a href="#contact" class="btn btn--primary">Let's Talk</a>
+              <a href="#contact" class="btn btn--primary">Let's Work Together</a>
             </div>
 
           </div>

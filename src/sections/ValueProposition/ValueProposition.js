@@ -13,7 +13,7 @@ export function renderValueProposition() {
             </p>
             <div class="value-cta">
               <span style="display: block; font-weight: 600; margin-bottom: var(--space-sm);">Have a website idea? Let's build it.</span>
-              <a href="#contact" class="btn btn--primary">Start a Project</a>
+              <a href="#contact" class="btn btn--primary">Let's Work Together</a>
             </div>
           </div>
         </div>
