@@ -1,18 +1,39 @@
 /* src/components/ProjectCard/ProjectCard.css */
 .project-card {
+  perspective: 1200px;
+  height: 100%;
+}
+
+.project-card-inner {
   display: flex;
   flex-direction: column;
   background-color: var(--color-bg-base);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  overflow: hidden;
-  transition: transform var(--transition-normal), border-color var(--transition-normal);
   height: 100%;
+  transform-style: preserve-3d;
+  transform: 
+    rotateX(calc(var(--card-rot-x, 0) * -12deg)) 
+    rotateY(calc(var(--card-rot-y, 0) * 12deg))
+    translateZ(calc(var(--card-hover, 0) * 10px));
+  transition: transform 0.4s cubic-bezier(0.2, 0, 0.2, 1), border-color var(--transition-normal), box-shadow var(--transition-normal);
+  box-shadow: 0 calc(var(--card-hover, 0) * 12px) calc(var(--card-hover, 0) * 24px) rgba(0, 0, 0, 0.4);
 }
 
-.project-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--color-text-secondary);
+.project-card:hover .project-card-inner {
+  border-color: rgba(255, 255, 255, 0.15);
+  --card-hover: 1;
+}
+
+/* 3D Depth Layers */
+.layer-bg { transform: translateZ(calc(var(--card-hover, 0) * 0px)); }
+.layer-md { transform: translateZ(calc(var(--card-hover, 0) * 15px)); }
+.layer-fg { transform: translateZ(calc(var(--card-hover, 0) * 25px)); }
+.layer-front { transform: translateZ(calc(var(--card-hover, 0) * 35px)); }
+
+.layer-bg, .layer-md, .layer-fg, .layer-front {
+  transition: transform 0.4s cubic-bezier(0.2, 0, 0.2, 1);
+  will-change: transform;
 }
 
 /* Visual / Fallback styling */
@@ -25,18 +46,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  border-top-left-radius: calc(var(--radius-lg) - 1px);
+  border-top-right-radius: calc(var(--radius-lg) - 1px);
+  transform-style: preserve-3d;
 }
 
 .project-card-visual img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform var(--transition-normal);
+  border-top-left-radius: calc(var(--radius-lg) - 1px);
+  border-top-right-radius: calc(var(--radius-lg) - 1px);
+  transition: transform 0.4s cubic-bezier(0.2, 0, 0.2, 1);
 }
 
 .project-card:hover .project-card-visual img {
-  transform: scale(1.02);
+  transform: scale(1.02) translateZ(5px);
 }
 
 /* CSS Abstract Fallback */
@@ -46,6 +71,9 @@
   display: flex;
   flex-direction: column;
   background: linear-gradient(135deg, rgba(30, 30, 30, 0.4), rgba(10, 10, 10, 0.8));
+  border-top-left-radius: calc(var(--radius-lg) - 1px);
+  border-top-right-radius: calc(var(--radius-lg) - 1px);
+  transform-style: preserve-3d;
 }
 
 .fallback-browser-bar {
@@ -56,6 +84,8 @@
   align-items: center;
   padding: 0 var(--space-sm);
   gap: 4px;
+  transform: translateZ(calc(var(--card-hover, 0) * 10px));
+  transition: transform 0.4s cubic-bezier(0.2, 0, 0.2, 1);
 }
 
 .fallback-dot {
@@ -71,12 +101,16 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-sm);
+  transform-style: preserve-3d;
 }
 
 .fallback-skeleton {
   background-color: var(--color-bg-elevated);
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: var(--radius-sm);
+  transform: translateZ(calc(var(--card-hover, 0) * 15px));
+  transition: transform 0.4s cubic-bezier(0.2, 0, 0.2, 1), box-shadow 0.4s;
+  box-shadow: 0 calc(var(--card-hover, 0) * 4px) calc(var(--card-hover, 0) * 8px) rgba(0,0,0,0.3);
 }
 
 .fallback-skeleton.large {
@@ -94,6 +128,7 @@
   display: flex;
   flex-direction: column;
   flex: 1;
+  transform-style: preserve-3d;
 }
 
 @media (min-width: 768px) {
@@ -104,6 +139,7 @@
 
 .project-card-header {
   margin-bottom: var(--space-md);
+  transform-style: preserve-3d;
 }
 
 .project-card-title {
@@ -171,14 +207,18 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .project-card,
+  .project-card-inner {
+    transform: none !important;
+    transition: none !important;
+    box-shadow: none !important;
+  }
   .project-card-visual img {
-    transition: none;
+    transform: none !important;
+    transition: none !important;
   }
-  .project-card:hover {
-    transform: none;
-  }
-  .project-card:hover .project-card-visual img {
-    transform: none;
+  .layer-bg, .layer-md, .layer-fg, .layer-front,
+  .fallback-browser-bar, .fallback-skeleton {
+    transform: none !important;
+    transition: none !important;
   }
 }

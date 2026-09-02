@@ -8,6 +8,7 @@ import { renderAbout } from './sections/About/About.js';
 import { renderSkills } from './sections/Skills/Skills.js';
 import { renderProcess } from './sections/Process/Process.js';
 import { renderProjects } from './sections/Projects/Projects.js';
+import { initProjectCards } from './components/ProjectCard/ProjectCard.js';
 import { renderExperience } from './sections/Experience/Experience.js';
 import { renderEducation } from './sections/Education/Education.js';
 import { renderClientValue } from './sections/ClientValue/ClientValue.js';
@@ -44,4 +45,5 @@ app.innerHTML = `
 // Initialize component logic
 initNavbar();
 initHero();
+initProjectCards();
 initScrollReveal();

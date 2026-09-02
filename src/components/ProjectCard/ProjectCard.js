@@ -32,28 +32,29 @@ export function renderProjectCard(project, index) {
 
   return `
     <article class="project-card reveal" style="transition-delay: ${delay}ms;">
+      <div class="project-card-inner">
       
-      <div class="project-card-visual">
-        ${visualContent}
-      </div>
-      
-      <div class="project-card-content">
-        <header class="project-card-header">
-          <h3 class="project-card-title">${project.name}</h3>
+        <div class="project-card-visual layer-bg">
+          ${visualContent}
+        </div>
+        
+        <div class="project-card-content">
+          <header class="project-card-header layer-md">
+          <h3 class="project-card-title layer-fg">${project.name}</h3>
           <div class="project-card-meta">
             ${project.category} &bull; ${project.status}
           </div>
         </header>
         
-        <p class="project-card-desc">
+        <p class="project-card-desc layer-md">
           ${project.shortDescription || project.description}
         </p>
         
-        <div class="project-card-tech" aria-label="Technologies used">
+        <div class="project-card-tech layer-fg" aria-label="Technologies used">
           ${techTags}
         </div>
         
-        <footer class="project-card-actions">
+        <footer class="project-card-actions layer-front">
           ${project.liveUrl ? `
             <a href="${project.liveUrl}" target="_blank" rel="noopener noreferrer" class="project-action-link">
               View Live &rarr;
@@ -72,6 +73,44 @@ export function renderProjectCard(project, index) {
         </footer>
       </div>
       
+      </div>
     </article>
   `;
+}
+
+export function initProjectCards() {
+  const cards = document.querySelectorAll('.project-card');
+  if (!cards.length) return;
+
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReducedMotion) return;
+
+  // Disable on mobile/tablet to prioritize performance and usability
+  if (window.innerWidth < 1024) return;
+
+  cards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      
+      // Normalize from -0.5 to 0.5
+      const xNorm = (x / rect.width) - 0.5;
+      const yNorm = (y / rect.height) - 0.5;
+
+      requestAnimationFrame(() => {
+        card.style.setProperty('--card-rot-x', yNorm.toFixed(3));
+        card.style.setProperty('--card-rot-y', xNorm.toFixed(3));
+        card.style.setProperty('--card-hover', 1);
+      });
+    });
+
+    card.addEventListener('mouseleave', () => {
+      requestAnimationFrame(() => {
+        card.style.setProperty('--card-rot-x', 0);
+        card.style.setProperty('--card-rot-y', 0);
+        card.style.setProperty('--card-hover', 0);
+      });
+    });
+  });
 }
