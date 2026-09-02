@@ -4,7 +4,7 @@ import { renderServiceCard } from '../../components/ServiceCard/ServiceCard.js';
 
 export function renderServices() {
   return `
-    <section id="services" class="services-section" aria-labelledby="services-title">
+    <section id="services" class="section services-section" aria-labelledby="services-title">
       <div class="container">
         
         <header class="services-header reveal">

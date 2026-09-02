@@ -1,8 +1,5 @@
 /* src/sections/ClientValue/ClientValue.css */
 .client-value-section {
-  padding-top: var(--space-2xl);
-  padding-bottom: var(--space-2xl);
-  background-color: var(--color-bg-base);
   border-top: 1px solid var(--color-border);
 }
 

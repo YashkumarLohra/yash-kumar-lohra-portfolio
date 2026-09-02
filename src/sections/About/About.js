@@ -3,7 +3,7 @@ import { siteConfig } from '../../config/site.js';
 
 export function renderAbout() {
   return `
-    <section id="about" class="about-section" aria-labelledby="about-title">
+    <section id="about" class="section about-section" aria-labelledby="about-title">
       <div class="container">
         
         <header class="about-header reveal">

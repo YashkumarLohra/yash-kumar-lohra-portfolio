@@ -25,7 +25,7 @@ export function renderEducation() {
   ];
 
   return `
-    <section id="education" class="education-section" aria-labelledby="education-title">
+    <section id="education" class="section education-section" aria-labelledby="education-title">
       <div class="container">
         
         <header class="education-header reveal">

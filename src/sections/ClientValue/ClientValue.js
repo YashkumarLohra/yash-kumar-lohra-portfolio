@@ -4,7 +4,7 @@ import { renderClientValueCard } from '../../components/ClientValueCard/ClientVa
 
 export function renderClientValue() {
   return `
-    <section id="why-work-with-me" class="client-value-section" aria-labelledby="cv-title">
+    <section id="why-work-with-me" class="section client-value-section" aria-labelledby="cv-title">
       <div class="container">
         
         <header class="cv-header reveal">

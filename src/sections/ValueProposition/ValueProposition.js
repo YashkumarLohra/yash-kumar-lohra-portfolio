@@ -2,7 +2,7 @@ import './ValueProposition.css';
 
 export function renderValueProposition() {
   return `
-    <section id="why-work-with-me" class="value-section" aria-labelledby="value-title">
+    <section id="why-work-with-me" class="section value-section" aria-labelledby="value-title">
       <div class="container value-container">
         
         <div class="value-left reveal">

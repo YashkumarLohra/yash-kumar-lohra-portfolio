@@ -19,7 +19,7 @@ function renderSkillGroup(group, index) {
 
 export function renderSkills() {
   return `
-    <section id="skills" class="skills-section" aria-labelledby="skills-title">
+    <section id="skills" class="section skills-section" aria-labelledby="skills-title">
       <div class="container">
         
         <header class="skills-header reveal">

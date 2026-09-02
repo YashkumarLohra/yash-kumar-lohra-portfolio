@@ -4,7 +4,7 @@ import { renderJourneyStep } from '../../components/JourneyStep/JourneyStep.js';
 
 export function renderJourney() {
   return `
-    <section id="journey" class="journey-section" aria-labelledby="journey-title">
+    <section id="journey" class="section journey-section" aria-labelledby="journey-title">
       <div class="container">
         
         <div class="journey-container">

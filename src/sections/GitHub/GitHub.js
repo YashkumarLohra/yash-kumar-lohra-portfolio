@@ -11,7 +11,7 @@ export function renderGitHub() {
     : `<button class="btn btn--primary github-cta disabled" disabled>${githubConfig.ctaLabel} (Coming Soon)</button>`;
 
   return `
-    <section id="github" class="github-section" aria-labelledby="github-title">
+    <section id="github" class="section github-section" aria-labelledby="github-title">
       <div class="container">
         
         <div class="github-grid">

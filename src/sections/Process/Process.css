@@ -1,7 +1,5 @@
 /* src/sections/Process/Process.css */
 .process-section {
-  padding-top: var(--space-2xl);
-  padding-bottom: var(--space-2xl);
   background-color: var(--color-bg-surface);
   border-top: 1px solid var(--color-border);
 }
@@ -77,7 +75,6 @@
 .process-step {
   position: relative;
   padding-left: calc(20px + var(--space-xl));
-  padding-bottom: var(--space-2xl);
   z-index: 2;
   transition: transform var(--transition-normal);
 }
@@ -161,7 +158,6 @@
 /* CTA */
 .process-cta {
   margin-top: var(--space-2xl);
-  padding-top: var(--space-2xl);
   border-top: 1px solid var(--color-border);
   text-align: center;
 }

@@ -1,8 +1,5 @@
 /* src/sections/Skills/Skills.css */
 .skills-section {
-  padding-top: var(--space-2xl);
-  padding-bottom: var(--space-2xl);
-  background-color: var(--color-bg-base);
 }
 
 .skills-header {

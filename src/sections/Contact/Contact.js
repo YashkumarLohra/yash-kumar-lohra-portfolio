@@ -20,7 +20,7 @@ export function renderContact() {
   ].filter(link => link.url);
 
   return `
-    <section id="contact" class="contact-section" aria-labelledby="contact-title">
+    <section id="contact" class="section contact-section" aria-labelledby="contact-title">
       <div class="container">
         
         <div class="contact-container">

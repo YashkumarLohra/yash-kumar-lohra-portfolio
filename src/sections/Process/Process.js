@@ -16,7 +16,7 @@ function renderProcessStep(step, index) {
 
 export function renderProcess() {
   return `
-    <section id="process" class="process-section" aria-labelledby="process-title">
+    <section id="process" class="section process-section" aria-labelledby="process-title">
       <div class="container">
         
         <div class="process-container">

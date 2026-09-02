@@ -35,7 +35,7 @@ export function renderExperience() {
   ];
 
   return `
-    <section id="experience" class="experience-section" aria-labelledby="experience-title">
+    <section id="experience" class="section experience-section" aria-labelledby="experience-title">
       <div class="container">
         
         <header class="experience-header reveal">

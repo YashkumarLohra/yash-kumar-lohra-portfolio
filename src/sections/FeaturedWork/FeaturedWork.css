@@ -1,8 +1,5 @@
 /* src/sections/FeaturedWork/FeaturedWork.css */
 .work-section {
-  padding-top: var(--space-2xl);
-  padding-bottom: var(--space-2xl);
-  background-color: var(--color-bg-base);
 }
 
 .work-header {

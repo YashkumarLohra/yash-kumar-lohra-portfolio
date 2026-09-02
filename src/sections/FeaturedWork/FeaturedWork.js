@@ -11,7 +11,7 @@ export function renderFeaturedWork() {
   const displayTech = lumiere.technologies.slice(0, 6);
 
   return `
-    <section id="work" class="work-section" aria-labelledby="work-title">
+    <section id="work" class="section work-section" aria-labelledby="work-title">
       <div class="container">
         
         <header class="work-header reveal">

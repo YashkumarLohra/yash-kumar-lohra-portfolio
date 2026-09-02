@@ -7,7 +7,7 @@ export function renderProjects() {
   const hasProjects = projects && projects.length > 0;
 
   return `
-    <section id="projects" class="projects-section" aria-labelledby="projects-title">
+    <section id="projects" class="section projects-section" aria-labelledby="projects-title">
       <div class="container">
         
         <header class="projects-header reveal">

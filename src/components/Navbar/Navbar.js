@@ -92,4 +92,30 @@ export function initNavbar() {
       toggle.focus();
     }
   });
+
+  // Scrollspy logic for active nav links
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-link:not(.btn)');
+
+  const observerOptions = {
+    root: null,
+    rootMargin: '-20% 0px -80% 0px', // Triggers when section is near top
+    threshold: 0
+  };
+
+  const scrollspyObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const currentId = entry.target.getAttribute('id');
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === `#${currentId}`) {
+            link.classList.add('active');
+          }
+        });
+      }
+    });
+  }, observerOptions);
+
+  sections.forEach(sec => scrollspyObserver.observe(sec));
 }
