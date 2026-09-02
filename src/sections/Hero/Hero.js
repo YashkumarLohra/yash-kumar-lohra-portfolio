@@ -1,5 +1,7 @@
 import './Hero.css';
 import { renderSocialLinks } from '../../components/SocialLinks/SocialLinks.js';
+import { siteConfig } from '../../config/site.js';
+import profileImg from '../../assets/images/profile.jpg';
 
 export function renderHero() {
   return `
@@ -28,8 +30,8 @@ export function renderHero() {
           </div>
         </div>
 
-        <!-- Right Visual (CSS 3D Depth) -->
-        <div class="hero-visual-container" aria-hidden="true">
+        <!-- Right Visual (CSS 3D Depth + Professional Profile Photo) -->
+        <div class="hero-visual-container" aria-label="Professional profile of ${siteConfig.name}">
           <div class="hero-visual-parallax">
             <div class="hero-visual-mesh">
               
@@ -44,10 +46,29 @@ export function renderHero() {
                 <div class="geometric-shape shape-square"></div>
               </div>
               
-              <!-- 3. PRIMARY 3D OBJECT/COMPOSITION -->
+              <!-- 3. PRIMARY 3D COMPOSITION: PROFESSIONAL PORTRAIT -->
               <div class="visual-layer layer-primary">
-                <div class="primary-glass-panel">
-                  <div class="glass-reflection"></div>
+                <div class="hero-portrait-card">
+                  <div class="hero-portrait-frame">
+                    <img 
+                      src="${profileImg}" 
+                      alt="${siteConfig.name} — Freelance Web Developer and UI/UX Designer" 
+                      class="hero-portrait-img"
+                      width="1024"
+                      height="1024"
+                      loading="eager"
+                      fetchpriority="high"
+                      decoding="async"
+                    />
+                    <div class="hero-portrait-glare" aria-hidden="true"></div>
+                  </div>
+                  
+                  <!-- Floating Identity Badge -->
+                  <div class="hero-portrait-badge layer-badge" aria-label="Identity Label">
+                    <span class="badge-name">${siteConfig.name}</span>
+                    <span class="badge-sep" aria-hidden="true">&bull;</span>
+                    <span class="badge-role">Freelance Web Developer</span>
+                  </div>
                 </div>
               </div>
               
@@ -73,12 +94,18 @@ export function initHero() {
   
   if (!heroSection || !parallaxContainer) return;
 
+  // Respect reduced motion
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  // Disable on touch-only devices
+  const canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  if (!canHover) return;
+
+  let rafId = null;
+
   const handleMouseMove = (e) => {
-    // Respect reduced motion preferences
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    
-    // Disable on mobile/tablet to prioritize performance and usability
-    if (window.innerWidth < 1024) return;
+    // Disable on mobile viewports (< 768px)
+    if (window.innerWidth < 768) return;
 
     const rect = heroSection.getBoundingClientRect();
     const x = e.clientX - rect.left;
@@ -88,20 +115,28 @@ export function initHero() {
     const xNorm = (x / rect.width) - 0.5;
     const yNorm = (y / rect.height) - 0.5;
 
-    // Use requestAnimationFrame for smooth performance
-    requestAnimationFrame(() => {
-      parallaxContainer.style.setProperty('--mouse-x', xNorm.toFixed(3));
-      parallaxContainer.style.setProperty('--mouse-y', yNorm.toFixed(3));
+    // Scale intensity on tablet (768px - 991px)
+    const isTablet = window.innerWidth >= 768 && window.innerWidth < 992;
+    const intensity = isTablet ? 0.5 : 1.0;
+
+    if (rafId) cancelAnimationFrame(rafId);
+    rafId = requestAnimationFrame(() => {
+      // Subtle clamping: maximum ~5deg to 6deg
+      parallaxContainer.style.setProperty('--mouse-x', (xNorm * intensity).toFixed(3));
+      parallaxContainer.style.setProperty('--mouse-y', (yNorm * intensity).toFixed(3));
+      parallaxContainer.style.setProperty('--hero-hover', (1 * intensity).toFixed(2));
     });
   };
 
-  heroSection.addEventListener('mousemove', handleMouseMove);
+  heroSection.addEventListener('mousemove', handleMouseMove, { passive: true });
   
-  // Reset when mouse leaves the section
+  // Clean reset when mouse leaves
   heroSection.addEventListener('mouseleave', () => {
-    requestAnimationFrame(() => {
-      parallaxContainer.style.setProperty('--mouse-x', 0);
-      parallaxContainer.style.setProperty('--mouse-y', 0);
+    if (rafId) cancelAnimationFrame(rafId);
+    rafId = requestAnimationFrame(() => {
+      parallaxContainer.style.setProperty('--mouse-x', '0');
+      parallaxContainer.style.setProperty('--mouse-y', '0');
+      parallaxContainer.style.setProperty('--hero-hover', '0');
     });
-  });
+  }, { passive: true });
 }

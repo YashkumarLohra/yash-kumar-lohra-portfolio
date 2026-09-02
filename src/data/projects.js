@@ -1,4 +1,8 @@
 // src/data/projects.js
+import lumiereImg from '../assets/images/projects/lumiere.png';
+import primeestateImg from '../assets/images/projects/primeestate.png';
+import growthsparkImg from '../assets/images/projects/growthspark.png';
+import aisaasImg from '../assets/images/projects/aisaas.png';
 
 export const projects = [
   {
@@ -26,8 +30,8 @@ export const projects = [
       'Google Fonts integration',
       'Inline SVG icons'
     ],
-    image: null,
-    screenshots: [],
+    image: lumiereImg,
+    screenshots: [lumiereImg],
     githubUrl: 'https://github.com/YashkumarLohra/lumiere-restaurant-website',
     liveUrl: 'https://lumiererestaurantwebsite.netlify.app/',
     caseStudyUrl: null,
@@ -57,8 +61,8 @@ export const projects = [
       'Responsive navigation',
       'Mobile-friendly design'
     ],
-    image: null,
-    screenshots: [],
+    image: primeestateImg,
+    screenshots: [primeestateImg],
     githubUrl: 'https://github.com/YashkumarLohra/primeestate-real-estate-landing-page',
     liveUrl: 'https://realestatelandingpg.netlify.app/',
     caseStudyUrl: null,
@@ -87,8 +91,8 @@ export const projects = [
       'Clear CTAs',
       'Professional visual hierarchy'
     ],
-    image: null,
-    screenshots: [],
+    image: growthsparkImg,
+    screenshots: [growthsparkImg],
     githubUrl: 'https://github.com/YashkumarLohra/Digital-Marketing-Agency-Website',
     liveUrl: 'https://growthsparkagencywebsite.netlify.app/',
     caseStudyUrl: null,
@@ -116,8 +120,8 @@ export const projects = [
       'SaaS layout',
       'Responsive design'
     ],
-    image: null,
-    screenshots: [],
+    image: aisaasImg,
+    screenshots: [aisaasImg],
     githubUrl: 'https://github.com/YashkumarLohra/ai-saas-platform',
     liveUrl: 'https://tangerine-cactus-97e14d.netlify.app/',
     caseStudyUrl: null,

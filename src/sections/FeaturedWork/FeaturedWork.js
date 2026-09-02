@@ -23,7 +23,7 @@ export function renderFeaturedWork() {
           
           <figure class="project-visual-wrapper reveal">
             ${lumiere.image 
-              ? `<img src="${lumiere.image}" alt="${lumiere.name} homepage" class="project-visual-img" />`
+              ? `<img src="${lumiere.image}" alt="${lumiere.name} homepage" class="project-visual-img" width="1024" height="490" loading="eager" decoding="async" />`
               : `
               <div class="project-visual-browser" aria-hidden="true">
                 <div class="browser-dot"></div>
