@@ -8,13 +8,12 @@ export function renderProjectCard(project, index) {
   const imageSrc = project.image || (project.screenshots && project.screenshots.length > 0 ? project.screenshots[0] : null);
   const hasImage = Boolean(imageSrc);
 
-  // Derive a clean display domain for the browser bar
-  let displayDomain = 'localhost:3000';
+  let displayDomain = project.shortName.toLowerCase().replace(/\s+/g, '') + '.app';
   if (project.liveUrl) {
     try {
       displayDomain = new URL(project.liveUrl).hostname;
     } catch {
-      displayDomain = project.shortName.toLowerCase().replace(/\s+/g, '') + '.app';
+      // Keep default
     }
   }
 
