@@ -58,3 +58,73 @@
   color: var(--color-text-secondary);
   font-size: 1.125rem;
 }
+
+/* Filter UI */
+.projects-filter-container {
+  margin-bottom: var(--space-xl);
+  display: flex;
+  justify-content: flex-start;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding-bottom: 4px;
+}
+
+.projects-filter-container::-webkit-scrollbar {
+  display: none;
+}
+
+.projects-filter-list {
+  display: flex;
+  gap: var(--space-sm);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.projects-filter-btn {
+  background-color: transparent;
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+}
+
+.projects-filter-btn:hover,
+.projects-filter-btn:focus-visible {
+  color: var(--color-text-primary);
+  border-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.projects-filter-btn:focus-visible {
+  outline: 2px solid var(--color-text-primary);
+  outline-offset: 2px;
+}
+
+.projects-filter-btn.active {
+  background-color: var(--color-text-primary);
+  color: var(--color-bg-base);
+  border-color: var(--color-text-primary);
+}
+
+/* Dynamic Filter Empty State */
+.projects-filter-empty {
+  display: none;
+  grid-column: 1 / -1;
+  padding: var(--space-xl);
+  text-align: center;
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+}
+
+.project-card.hidden {
+  display: none;
+}

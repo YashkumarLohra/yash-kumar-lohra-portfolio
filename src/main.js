@@ -7,7 +7,7 @@ import { renderFeaturedWork } from './sections/FeaturedWork/FeaturedWork.js';
 import { renderAbout } from './sections/About/About.js';
 import { renderSkills } from './sections/Skills/Skills.js';
 import { renderProcess } from './sections/Process/Process.js';
-import { renderProjects } from './sections/Projects/Projects.js';
+import { renderProjects, initProjectsFilter } from './sections/Projects/Projects.js';
 import { initProjectCards } from './components/ProjectCard/ProjectCard.js';
 import { renderExperience } from './sections/Experience/Experience.js';
 import { renderEducation } from './sections/Education/Education.js';
@@ -45,5 +45,6 @@ app.innerHTML = `
 // Initialize component logic
 initNavbar();
 initHero();
+initProjectsFilter();
 initProjectCards();
 initScrollReveal();

@@ -1,0 +1,111 @@
+/* src/components/ProjectDetail/ProjectDetail.css */
+
+.project-detail {
+  background-color: var(--color-bg-base);
+  min-height: 100vh;
+  padding-bottom: var(--space-2xl);
+}
+
+.project-detail-header {
+  padding: calc(var(--layout-header-height) + var(--space-xl)) 0 var(--space-xl);
+  text-align: center;
+}
+
+.project-detail-eyebrow {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-md);
+  text-transform: uppercase;
+}
+
+.project-detail-title {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-md);
+  line-height: 1.1;
+}
+
+.project-detail-desc {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  max-width: 600px;
+  margin: 0 auto var(--space-lg);
+}
+
+.project-detail-actions {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.project-detail-hero-img {
+  max-width: 1024px;
+  margin: 0 auto var(--space-2xl);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background-color: #080808;
+}
+
+.project-detail-hero-img img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1024 / 490;
+  object-fit: cover;
+}
+
+.case-study-body {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+  max-width: 900px;
+}
+
+@media (min-width: 768px) {
+  .case-study-body {
+    grid-template-columns: 2fr 1fr;
+    gap: var(--space-2xl);
+  }
+}
+
+.case-study-section {
+  margin-bottom: var(--space-xl);
+}
+
+.case-study-section-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 8px;
+}
+
+.case-study-section-content {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+}
+
+.case-study-sidebar {
+  position: sticky;
+  top: calc(var(--layout-header-height) + var(--space-lg));
+  align-self: start;
+}
+
+.case-study-sidebar-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-md);
+}

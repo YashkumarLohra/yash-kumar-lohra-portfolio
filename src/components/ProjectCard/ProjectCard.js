@@ -71,7 +71,7 @@ export function renderProjectCard(project, index) {
     .join('');
 
   return `
-    <article class="project-card reveal" style="transition-delay: ${delay}ms;" data-project-id="${project.id}">
+    <article class="project-card reveal" style="transition-delay: ${delay}ms;" data-project-id="${project.id}" data-categories="${project.categories ? project.categories.join(',') : ''}">
       <div class="project-card-inner">
       
         ${visualContent}

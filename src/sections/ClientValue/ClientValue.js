@@ -17,11 +17,6 @@ export function renderClientValue() {
           ${clientValueData.map((val, index) => renderClientValueCard(val, index)).join('')}
         </div>
 
-        <div class="cv-cta-area reveal" style="transition-delay: 200ms;">
-          <div class="cv-cta-text">Have a project in mind?</div>
-          <a href="#contact" class="cv-cta-button">Let's Work Together</a>
-        </div>
-
       </div>
     </section>
   `;

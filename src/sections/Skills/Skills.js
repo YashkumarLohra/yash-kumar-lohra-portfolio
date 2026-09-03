@@ -41,11 +41,6 @@ export function renderSkills() {
           </div>
         </div>
 
-        <div class="skills-cta reveal" style="transition-delay: 400ms;">
-          <span class="skills-cta-text">Need a website for your idea or business?</span>
-          <a href="#contact" class="btn btn--primary">Let's Work Together</a>
-        </div>
-
       </div>
     </section>
   `;

@@ -37,11 +37,6 @@ export function renderProcess() {
 
         </div>
 
-        <div class="process-cta reveal">
-          <span class="process-cta-text">Have an idea you want to build?</span>
-          <a href="#contact" class="btn btn--primary">Let's Work Together</a>
-        </div>
-
       </div>
     </section>
   `;
