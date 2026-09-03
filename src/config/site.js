@@ -8,7 +8,7 @@ export const siteConfig = {
     fiverr: 'https://www.fiverr.com/s/kXxgm2N',
     upwork: 'https://www.upwork.com/freelancers/~01a0e24687e9f93217?mp_source=share',
     freelancer: 'https://www.freelancer.in/u/YashKumarLohra?sb=t',
-    github: '' // Pending final URL
+    github: 'https://github.com/YashkumarLohra'
   },
   seo: {
     titleDefault: 'Yash Kumar Lohra | Freelance Web Developer',

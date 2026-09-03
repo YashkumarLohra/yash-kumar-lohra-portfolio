@@ -9,20 +9,24 @@ export const projects = [
     id: 'lumiere',
     name: 'Lumière Restaurant Website',
     shortName: 'Lumière',
-    category: 'Web Development',
+    category: 'Frontend Development',
     type: 'Restaurant / Hospitality',
     year: '2026',
     status: 'Completed',
-    shortDescription: 'Luxury restaurant website with premium web design and responsive frontend development.',
-    description: 'Lumière is a luxury restaurant website created to demonstrate premium web design, responsive frontend development, UI/UX, motion design, and hospitality branding.',
+    shortDescription: 'Luxury restaurant website demonstrating premium web design and responsive frontend architecture.',
+    description: 'Engineered a luxury restaurant website to showcase premium web design, responsive frontend development, UI/UX optimization, motion design, and hospitality branding.',
+    objective: 'Develop a highly responsive and visually engaging frontend interface with premium aesthetics.',
     problem: null,
     solution: null,
+    challenges: null,
+    impact: null,
     technologies: [
       'HTML5',
       'Vanilla CSS3',
       'JavaScript ES6+',
       'CSS Grid & Flexbox',
-      'Glassmorphism'
+      'Glassmorphism',
+      'Responsive UI'
     ],
     features: [
       'Accessible HTML structure',
@@ -41,18 +45,22 @@ export const projects = [
     id: 'primeestate',
     name: 'PrimeEstate Real Estate',
     shortName: 'PrimeEstate',
-    category: 'Web Development',
+    category: 'Frontend Development',
     type: 'Landing Page',
     year: '2026',
     status: 'Completed',
-    shortDescription: 'A premium real estate landing page designed to present properties through a modern visual system.',
-    description: 'A premium real estate landing page designed to present properties through a modern visual system, responsive layouts, clear property sections, and a polished browsing experience.',
+    shortDescription: 'A premium real estate landing page with a modern visual system and responsive layouts.',
+    description: 'Built a premium real estate landing page designed to present properties through a modern visual system, responsive property-focused sections, and a polished, accessible browsing experience.',
+    objective: 'Create a clean, conversion-focused landing page layout for real estate property presentation.',
     problem: null,
     solution: null,
+    challenges: null,
+    impact: null,
     technologies: [
       'HTML5',
       'CSS3',
-      'JavaScript'
+      'JavaScript ES6+',
+      'Frontend Architecture'
     ],
     features: [
       'Responsive property presentation',
@@ -76,14 +84,19 @@ export const projects = [
     type: 'Agency Website',
     year: '2026',
     status: 'Completed',
-    shortDescription: 'A modern digital presence for a marketing agency focusing on professional visual hierarchy and responsive experience.',
-    description: 'A modern digital presence for a marketing agency focusing on service presentation, responsive experience, clear CTAs, and a professional visual hierarchy.',
+    shortDescription: 'Modern digital presence focusing on service presentation and professional visual hierarchy.',
+    description: 'Developed a modern digital presence for a marketing agency, focusing on service presentation, responsive experience, clear conversion pathways, and professional visual hierarchy.',
+    objective: 'Build a professional agency website with clear service offerings and strong calls to action.',
     problem: null,
     solution: null,
+    challenges: null,
+    impact: null,
     technologies: [
       'HTML5',
       'CSS3',
-      'JavaScript'
+      'JavaScript',
+      'UI Development',
+      'Responsive Design'
     ],
     features: [
       'Agency presentation',
@@ -106,14 +119,19 @@ export const projects = [
     type: 'SaaS',
     year: '2026',
     status: 'Completed',
-    shortDescription: 'A premium AI SaaS platform that helps users discover, compare, and choose AI tools.',
-    description: 'A premium AI SaaS platform that helps users discover, compare, and choose the right AI tools for their tasks through intelligent recommendations and a streamlined product experience.',
+    shortDescription: 'A premium SaaS platform interface designed to help users discover and compare AI tools.',
+    description: 'Developed a premium AI SaaS platform interface designed to help users discover, compare, and choose the right AI tools for their tasks through intelligent recommendations and a streamlined product experience.',
+    objective: 'Design and build a clean SaaS product layout emphasizing visual hierarchy and clarity.',
     problem: null,
     solution: null,
+    challenges: null,
+    impact: null,
     technologies: [
       'HTML5',
       'CSS3',
-      'JavaScript'
+      'JavaScript',
+      'Product UI',
+      'Modern Web Design'
     ],
     features: [
       'Visual product concept',
