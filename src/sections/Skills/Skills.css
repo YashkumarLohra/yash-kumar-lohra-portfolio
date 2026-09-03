@@ -146,19 +146,7 @@
   background-color: var(--color-bg-surface);
 }
 
-/* CTA */
-.skills-cta {
-  margin-top: var(--space-2xl);
-  text-align: center;
-}
 
-.skills-cta-text {
-  display: block;
-  font-size: 1.125rem;
-  color: var(--color-text-primary);
-  margin-bottom: var(--space-md);
-  font-weight: 600;
-}
 
 @media (prefers-reduced-motion: reduce) {
   .skill-group {

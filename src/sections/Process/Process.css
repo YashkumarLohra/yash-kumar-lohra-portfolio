@@ -155,21 +155,6 @@
   border: 1px solid var(--color-border);
 }
 
-/* CTA */
-.process-cta {
-  margin-top: var(--space-2xl);
-  border-top: 1px solid var(--color-border);
-  text-align: center;
-}
-
-.process-cta-text {
-  display: block;
-  font-size: 1.125rem;
-  color: var(--color-text-primary);
-  margin-bottom: var(--space-md);
-  font-weight: 600;
-}
-
 @media (prefers-reduced-motion: reduce) {
   .process-step {
     transition: none;

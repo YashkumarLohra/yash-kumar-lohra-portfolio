@@ -48,7 +48,7 @@ export function renderFeaturedWork() {
             <h3 class="project-title">${lumiere.name}</h3>
             
             <div class="project-category">
-              ${lumiere.category} &bull; ${lumiere.status}
+              ${lumiere.categories.join(', ')} &bull; ${lumiere.status}
             </div>
             
             <p class="project-desc">
