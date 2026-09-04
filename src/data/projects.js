@@ -141,7 +141,7 @@ export const projects = [
     image: aisaasImg,
     screenshots: [aisaasImg],
     githubUrl: 'https://github.com/YashkumarLohra/ai-saas-platform',
-    liveUrl: 'https://tangerine-cactus-97e14d.netlify.app/',
+    liveUrl: 'https://tangerine-cactus-97e14.netlify.app/',
     caseStudyUrl: null,
     featured: false
   }
